@@ -6,11 +6,10 @@ import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 
 const timeline = [
-{ month: "Septiembre", title: "Inicio del Viaje", desc: "Llegada, presentación del grupo y primeras dinámicas de convivencia.", color: "border-primary" },
-{ month: "Octubre", title: "Autoconocimiento", desc: "Talleres de psicoterapia, educación emocional y exploración interior.", color: "border-secondary" },
-{ month: "Noviembre", title: "Exploración", desc: "Viaje por distintos territorios de Italia, conectando con nuevas realidades.", color: "border-accent" },
-{ month: "Diciembre", title: "Integración", desc: "Reflexión final, celebración y proyección de futuro.", color: "border-sky" }];
-
+{ month: "Semana 1", title: "Identidad", desc: "¿Quién soy? Reconozco mi cuerpo, mi territorio inmediato y mis emociones actuales como base de mi identidad.", color: "border-primary" },
+{ month: "Semana 2", title: "Raíces", desc: "¿De dónde vengo? Exploro mi historia, mi cultura, mi familia y mi genealogía personal para comprender mis raíces.", color: "border-secondary" },
+{ month: "Semana 3", title: "Presente", desc: "¿Dónde estoy? Me sitúo en el aquí y ahora, integrando mi dimensión personal y social en el presente.", color: "border-accent" },
+{ month: "Semana 4", title: "Visión", desc: "¿Hacia dónde voy? Defino mi propósito, proyecto y compromiso para orientar mi camino futuro.", color: "border-sky" }];
 
 const Programa = () => {
   return (
@@ -73,10 +72,10 @@ const Programa = () => {
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl font-display mb-12 text-center spray-tag">Los Ejes</h2>
           {[
-          { title: "Autoconocimiento", text: "Un espacio de acompañamiento para que cada joven explore su mundo interno, fortalezca su autonomía y desarrolle mayor claridad sobre quién es." },
-          { title: "Viaje de Exploración", text: "Un recorrido por distintos territorios y experiencias que amplían la mirada, conectan con la diversidad del mundo." },
-          { title: "Convivencia en Comunidad", text: "Vivir juntos implica escucharse, decidir en común y aprender a habitar la diferencia desde el respeto." },
-          { title: "Habilidades para la Vida", text: "La oportunidad de desarrollar competencias centrales para la vida adulta." }].
+  { title: "Biografía y Proyecto de Vida", text: "Un espacio para que cada joven narre su historia, reconozca su recorrido y comience a delinear un proyecto de vida con sentido y dirección propia." },
+  { title: "Bienestar / Biología Adolescente", text: "Un abordaje integral del bienestar que integra cuerpo, emociones y procesos biológicos propios de la adolescencia, promoviendo conciencia y autocuidado." },
+  { title: "Autoconocimiento / Eneagrama", text: "Un recorrido de exploración interior que, a través del eneagrama y otras herramientas, favorece la comprensión de la propia personalidad y el desarrollo consciente." },
+  { title: "Vínculos y Convivencia Democrática", text: "Un espacio para aprender a construir comunidad, fortalecer los vínculos y practicar formas de convivencia basadas en el respeto, la participación y la responsabilidad compartida." }].           
           map((eje, i) =>
           <div key={i} className="flex gap-6 mb-10 graffiti-border pl-6">
               <span className="text-4xl font-display text-primary shrink-0">0{i + 1}</span>
