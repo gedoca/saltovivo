@@ -7,6 +7,50 @@ import VideoSection from "@/components/VideoSection";
 import communityImg from "@/assets/community.png";
 
 
+const destacados = [
+  { 
+    name: "Sistema de Mentorías", 
+    origin: "Acompañamiento cercano", 
+    role: "Cada grupo cuenta con mentores y coordinadores que acompañan el proceso personal y grupal, sosteniendo espacios de seguimiento y orientación durante todo el mes." 
+  },
+  { 
+    name: "Grupos Reducidos (A, B, C, D)", 
+    origin: "Trabajo personalizado", 
+    role: "La división en grupos pequeños permite profundidad, confianza y participación activa, favoreciendo la expresión y el vínculo significativo." 
+  },
+  { 
+    name: "Rotación de Labores", 
+    origin: "Vida en comunidad", 
+    role: "Cocina, mercado, limpieza y organización son responsabilidades compartidas. Cada joven participa activamente en el sostenimiento de la vida cotidiana." 
+  },
+  { 
+    name: "Progresión de Talleres", 
+    origin: "Aprendizaje evolutivo", 
+    role: "Los talleres disminuyen en cantidad y aumentan en profundidad horaria cada semana, favoreciendo foco, compromiso y desarrollo de proyectos concretos." 
+  },
+  { 
+    name: "Diversidad de Áreas", 
+    origin: "Formación integral", 
+    role: "Ingeniería, ecología, construcción, comunicación, biología, música, plástica, danza y teatro integran saberes técnicos, artísticos y humanistas." 
+  },
+  { 
+    name: "Actividades Nocturnas", 
+    origin: "Experiencia cultural y vincular", 
+    role: "Fogón, música, desafíos, astronomía, mitología y fiesta fortalecen la convivencia y abren espacios lúdicos y simbólicos." 
+  },
+  { 
+    name: "Aprendizaje Experiencial", 
+    origin: "Teoría + práctica", 
+    role: "El programa integra clases, talleres, salidas y vida comunitaria, articulando reflexión, acción y experiencia directa." 
+  },
+  { 
+    name: "Intensidad Progresiva", 
+    origin: "Compromiso creciente", 
+    role: "El tiempo dedicado a los talleres se expande semana a semana (de 1:30h a 6h), acompañando la maduración del proceso y la consolidación de proyectos." 
+  }
+];
+
+
 const salidas = [
   {
     title: "Cultura Local",
@@ -164,6 +208,31 @@ const Programa = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+            {/* Destacados */}
+      <section className="section-padding">
+        <div className="container mx-auto">
+                   <h2 className="text-4xl font-display text-center mb-16 spray-tag">Otras claves del Programa</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {destacados.map((member, i) => (
+              <div
+                key={i}
+                className="bg-card border-2 border-border p-8 hover:border-primary transition-all group hover:-translate-y-1"
+              >
+                <div className={`w-14 h-14 ${colors[i]} flex items-center justify-center mb-5`}>
+                  <span className="text-2xl font-display text-primary-foreground">
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <h3 className="text-xl font-display mb-1">{member.name}</h3>
+                <span className="text-sm text-primary font-bold font-body">{member.origin}</span>
+                <p className="text-muted-foreground text-sm leading-relaxed mt-3 font-body">{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
