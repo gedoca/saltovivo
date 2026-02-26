@@ -37,7 +37,7 @@ const Index = () => {
               <Link to="/programa" className="btn-graffiti">
                 Saber Más
               </Link>
-              <Link to="/contacto" className="btn-graffiti-outline">
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" className="btn-graffiti-outline">
                 Pre-Inscripción
               </Link>
             </div>
@@ -141,7 +141,7 @@ const Index = () => {
           <p className="opacity-80 mb-8 font-body text-lg">
             Jóvenes distintos, un mismo viaje. Septiembre 2026, Italia.
           </p>
-          <Link to="/contacto" className="inline-block bg-accent text-accent-foreground px-10 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform transform skew-x-[-2deg]">
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" className="inline-block bg-accent text-accent-foreground px-10 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform transform skew-x-[-2deg]">
             Quiero Participar
           </Link>
         </div>
