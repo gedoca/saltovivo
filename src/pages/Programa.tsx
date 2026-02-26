@@ -4,6 +4,8 @@ import wallTexture from "@/assets/wall-texture.png";
 import wallDark from "@/assets/wall-dark.png";
 import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
+import communityImg from "@/assets/community.png";
+
 
 const salidas = [
   {
@@ -121,11 +123,11 @@ const Programa = () => {
         </div>
       </section>
 
-            {/* Agenda / Programa */}
+            {/* Jornada */}
       <section className="section-padding">
         <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <img src={programaImg} alt="Agenda semanal del programa" className="w-full h-[400px] object-cover shadow-xl" />
+            <img src={communityImg} alt="Agenda semanal del programa" className="w-full h-[400px] object-cover shadow-xl" />
             <div className="absolute -bottom-3 -left-3 w-full h-full border-4 border-accent -z-10" />
           </div>
           <div>
