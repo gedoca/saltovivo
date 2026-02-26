@@ -44,6 +44,11 @@ const destacados = [
     role: "El programa integra clases, talleres, salidas y vida comunitaria, articulando reflexión, acción y experiencia directa." 
   },
   { 
+  name: "Comunidad de Seguimiento", 
+  origin: "Proceso que continúa", 
+  role: "Al finalizar el mes, cada joven se integra a la comunidad del Salto con mentoría de seguimiento durante 3 meses, encuentros virtuales quincenales y posibilidad de voluntariado. El proceso no se cierra: se proyecta en red." 
+},
+  { 
     name: "Intensidad Progresiva", 
     origin: "Compromiso creciente", 
     role: "El tiempo dedicado a los talleres se expande semana a semana (de 1:30h a 6h), acompañando la maduración del proceso y la consolidación de proyectos." 
