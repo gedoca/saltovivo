@@ -213,30 +213,35 @@ const Programa = () => {
         </div>
       </section>
 
-            {/* Destacados */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-                   <h2 className="text-4xl font-display text-center mb-16 spray-tag">Otras claves del Programa</h2>
+{/* Destacados */}
+<section className="section-padding">
+  <div className="container mx-auto">
+    <h2 className="text-4xl font-display text-center mb-16 spray-tag">
+      Otras claves del Programa
+    </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {destacados.map((member, i) => (
-              <div
-                key={i}
-                className="bg-card border-2 border-border p-8 hover:border-primary transition-all group hover:-translate-y-1"
-              >
-                <div className={`w-14 h-14 ${colors[i]} flex items-center justify-center mb-5`}>
-                  <span className="text-2xl font-display text-primary-foreground">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="text-xl font-display mb-1">{member.name}</h3>
-                <span className="text-sm text-primary font-bold font-body">{member.origin}</span>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-3 font-body">{member.role}</p>
-              </div>
-            ))}
-          </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {destacados.map((member, i) => (
+        <div
+          key={i}
+          className={`${colors[i % colors.length]} p-8 transition-all group hover:-translate-y-1`}
+        >
+          <h3 className="text-xl font-display mb-1 text-primary-foreground">
+            {member.name}
+          </h3>
+          <span className="text-sm font-bold font-body text-primary-foreground/80">
+            {member.origin}
+          </span>
+          <p className="text-sm leading-relaxed mt-3 font-body text-primary-foreground/90">
+            {member.role}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+      
 
       
       <VideoSection title="El Programa en Acción" subtitle="Descubrí cómo es un día en El Año del Salto" />
