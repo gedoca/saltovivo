@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 
 const values = [
-  { title: "Escucha", desc: "Crear espacio para que cada voz sea oída y cada historia importa.", color: "text-primary" },
-  { title: "Respeto", desc: "Habitar la diferencia desde el cuidado mutuo y la aceptación.", color: "text-secondary" },
-  { title: "Autenticidad", desc: "Ser quienes somos sin máscaras, en un espacio seguro.", color: "text-accent" },
-  { title: "Crecimiento", desc: "Desafiarnos juntos para ir más allá de lo conocido.", color: "text-sky" },
-];
+{ title: "Escucha", desc: "Crear espacio para que cada voz sea oída y cada historia importa.", color: "text-primary" },
+{ title: "Respeto", desc: "Habitar la diferencia desde el cuidado mutuo y la aceptación.", color: "text-secondary" },
+{ title: "Autenticidad", desc: "Ser quienes somos sin máscaras, en un espacio seguro.", color: "text-accent" },
+{ title: "Crecimiento", desc: "Desafiarnos juntos para ir más allá de lo conocido.", color: "text-sky" }];
+
 
 const Comunidad = () => {
   return (
@@ -29,16 +29,16 @@ const Comunidad = () => {
 
       {/* Description */}
       <section className="section-padding" style={{ backgroundImage: `url(${wallTexture})` }}>
-        <div className="absolute inset-0 bg-background/75" />
+        <div className="absolute inset-0 bg-background/75 opacity-0" />
         <div className="relative z-10 container mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-display mb-6">
               Un espacio <span className="accent-underline">compartido</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4 font-body">
+            <p className="leading-relaxed text-lg mb-4 font-body font-bold text-[#212121]">
               Donde cada joven es acompañado a descubrir su voz, su lugar y su forma de estar en el mundo.
             </p>
-            <p className="text-muted-foreground leading-relaxed font-body">
+            <p className="leading-relaxed font-body font-bold text-neutral-900">
               La convivencia es uno de los ejes centrales. Vivir juntos permite que el aprendizaje ocurra en la experiencia real.
             </p>
           </div>
@@ -56,13 +56,13 @@ const Comunidad = () => {
           <div className="container mx-auto">
             <h2 className="text-4xl font-display text-center mb-16 spray-tag">Nuestros Valores</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((v, i) => (
-                <div key={i} className="text-center">
+              {values.map((v, i) =>
+              <div key={i} className="text-center">
                   <span className={`text-6xl font-display ${v.color}`}>{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="text-xl font-display mt-4 mb-3">{v.title}</h3>
                   <p className="text-cream/70 text-sm leading-relaxed font-body">{v.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -78,8 +78,8 @@ const Comunidad = () => {
           <Link to="/contacto" className="btn-graffiti">Contáctanos</Link>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 };
 
 export default Comunidad;
