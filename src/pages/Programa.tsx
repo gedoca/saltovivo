@@ -50,6 +50,7 @@ const destacados = [
   }
 ];
 
+const colors = ["bg-primary", "bg-secondary", "bg-accent", "bg-sky", "bg-primary", "bg-secondary", "bg-accent"];
 
 const salidas = [
   {
