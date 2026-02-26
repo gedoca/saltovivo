@@ -28,7 +28,7 @@ const Index = () => {
               Comienza tu viaje
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display leading-[1.1] mb-6 spray-tag">
-              Dá el<br />Salto
+              Dá el Salto
             </h1>
             <p className="text-muted-foreground max-w-md text-lg mb-8 font-body">
               30 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
