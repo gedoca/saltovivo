@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,81 +6,83 @@
 
 @layer base {
   :root {
-    --background: 45 30% 95%;
-    --foreground: 30 10% 15%;
+    --background: 40 25% 92%;
+    --foreground: 0 0% 10%;
 
-    --card: 45 25% 92%;
-    --card-foreground: 30 10% 15%;
+    --card: 40 20% 88%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 45 30% 95%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 40 25% 92%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 35 80% 50%;
-    --primary-foreground: 45 30% 95%;
+    --primary: 340 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 150 30% 75%;
-    --secondary-foreground: 30 10% 15%;
+    --secondary: 160 60% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 15% 88%;
-    --muted-foreground: 30 8% 45%;
+    --muted: 35 15% 82%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 150 25% 40%;
-    --accent-foreground: 45 30% 95%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 15% 82%;
-    --input: 35 15% 82%;
-    --ring: 35 80% 50%;
+    --border: 35 12% 75%;
+    --input: 35 12% 75%;
+    --ring: 340 85% 55%;
 
     --radius: 0.25rem;
 
-    --sidebar-background: 45 25% 92%;
-    --sidebar-foreground: 30 10% 15%;
-    --sidebar-primary: 35 80% 50%;
-    --sidebar-primary-foreground: 45 30% 95%;
-    --sidebar-accent: 150 25% 40%;
-    --sidebar-accent-foreground: 45 30% 95%;
-    --sidebar-border: 35 15% 82%;
-    --sidebar-ring: 35 80% 50%;
+    --sidebar-background: 40 20% 88%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 340 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 60% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 35 12% 75%;
+    --sidebar-ring: 340 85% 55%;
 
-    /* Custom tokens */
-    --hero-overlay: 30 10% 15%;
-    --warm-gold: 42 90% 55%;
-    --sage-green: 150 25% 40%;
-    --earth-dark: 30 15% 12%;
-    --cream: 45 30% 95%;
+    /* Vibrant graffiti tokens */
+    --hot-pink: 340 85% 55%;
+    --electric-green: 160 60% 45%;
+    --spray-yellow: 45 95% 55%;
+    --sky-blue: 200 80% 55%;
+    --earth-dark: 0 0% 12%;
+    --cream: 40 25% 92%;
+    --wall-warm: 35 20% 78%;
   }
 
   .dark {
-    --background: 30 15% 10%;
-    --foreground: 45 20% 90%;
-    --card: 30 15% 14%;
-    --card-foreground: 45 20% 90%;
-    --popover: 30 15% 10%;
-    --popover-foreground: 45 20% 90%;
-    --primary: 35 80% 50%;
-    --primary-foreground: 30 15% 10%;
-    --secondary: 150 20% 25%;
-    --secondary-foreground: 45 20% 90%;
-    --muted: 30 10% 20%;
+    --background: 0 0% 10%;
+    --foreground: 40 20% 90%;
+    --card: 0 0% 14%;
+    --card-foreground: 40 20% 90%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 340 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
     --muted-foreground: 40 10% 60%;
-    --accent: 150 25% 35%;
-    --accent-foreground: 45 20% 90%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 30 10% 22%;
-    --input: 30 10% 22%;
-    --ring: 35 80% 50%;
-    --sidebar-background: 30 15% 12%;
-    --sidebar-foreground: 45 20% 90%;
-    --sidebar-primary: 35 80% 50%;
-    --sidebar-primary-foreground: 30 15% 10%;
-    --sidebar-accent: 150 25% 35%;
-    --sidebar-accent-foreground: 45 20% 90%;
-    --sidebar-border: 30 10% 22%;
-    --sidebar-ring: 35 80% 50%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 340 85% 55%;
+    --sidebar-background: 0 0% 12%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 340 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 60% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 340 85% 55%;
   }
 }
 
@@ -109,18 +111,36 @@
     @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
   }
 
+  .wall-bg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .wall-bg-dark {
+    background-size: cover;
+    background-position: center;
+  }
+
   .hero-gradient-overlay {
     background: linear-gradient(
+      180deg,
+      hsl(var(--earth-dark) / 0.3) 0%,
+      hsl(var(--earth-dark) / 0.1) 40%,
+      hsl(var(--earth-dark) / 0.6) 100%
+    );
+  }
+
+  .dark-overlay {
+    background: linear-gradient(
       135deg,
-      hsl(var(--hero-overlay) / 0.85) 0%,
-      hsl(var(--hero-overlay) / 0.4) 50%,
-      transparent 100%
+      hsl(var(--earth-dark) / 0.92) 0%,
+      hsl(var(--earth-dark) / 0.85) 100%
     );
   }
 
   .number-watermark {
-    @apply font-display font-black text-[8rem] md:text-[12rem] leading-none opacity-10 select-none;
-    color: hsl(var(--sage-green));
+    @apply font-display font-black text-[8rem] md:text-[12rem] leading-none opacity-15 select-none;
+    color: hsl(var(--hot-pink));
   }
 
   .accent-underline {
@@ -134,8 +154,36 @@
     bottom: -4px;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: hsl(var(--warm-gold));
-    border-radius: 2px;
+    height: 6px;
+    background: hsl(var(--spray-yellow));
+    border-radius: 3px;
+    transform: rotate(-1deg);
+  }
+
+  .spray-tag {
+    text-shadow: 3px 3px 0 hsl(var(--hot-pink) / 0.3);
+  }
+
+  .video-container {
+    @apply relative w-full overflow-hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .video-container iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  .graffiti-border {
+    border-left: 6px solid hsl(var(--spray-yellow));
+  }
+
+  .btn-graffiti {
+    @apply inline-block bg-primary text-primary-foreground px-8 py-3 font-body font-bold text-sm uppercase tracking-widest 
+    hover:scale-105 transition-transform transform skew-x-[-2deg];
+  }
+
+  .btn-graffiti-outline {
+    @apply inline-block border-2 border-accent text-accent px-8 py-3 font-body font-bold text-sm uppercase tracking-widest 
+    hover:bg-accent hover:text-accent-foreground transition-all transform skew-x-[-2deg];
   }
 }
