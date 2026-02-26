@@ -10,7 +10,7 @@ const navItems = [
   { path: "/filosofia", label: "Filosofía" },
   { path: "/equipo", label: "Equipo" },
   { path: "/comunidad", label: "Comunidad" },
-  { path: "/contacto", label: "Contacto" },
+  { path: "https://forms.gle/VWL5DjWpnFEYuBUg8", label: "Pre-Inscripción" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
