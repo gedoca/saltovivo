@@ -5,6 +5,39 @@ import wallDark from "@/assets/wall-dark.png";
 import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 
+const salidas = [
+  {
+    title: "Cultura Local",
+    text: "Recorridos por pequeños pueblos para conocer su historia, cultura y modo de vida, ampliando la mirada desde la experiencia directa.",
+    color: "border-primary",
+  },
+  {
+    title: "Catania",
+    text: "Exploración urbana en una ciudad viva y diversa, conectando con su energía social, cultural y cotidiana.",
+    color: "border-secondary",
+  },
+  {
+    title: "Siracusa",
+    text: "Encuentro con la historia y el patrimonio del Mediterráneo, integrando pasado y presente en una experiencia cultural profunda.",
+    color: "border-accent",
+  },
+  {
+    title: "Palermo",
+    text: "Inmersión en una capital vibrante que invita a reflexionar sobre identidad, diversidad y convivencia social.",
+    color: "border-sky",
+  },
+  {
+    title: "Volcán Etna",
+    text: "Experiencia en la base y el ascenso al volcán como desafío personal y colectivo, conectando con la fuerza de la naturaleza y fortaleciendo la confianza y la superación.",
+    color: "border-primary",
+  },
+  {
+    title: "Isla de Milazzo",
+    text: "Salida en barco hacia la isla para vivir el mar como experiencia de apertura, contemplación y conexión grupal en contacto con el paisaje.",
+    color: "border-secondary",
+  },
+];
+
 const timeline = [
 { month: "Semana 1", title: "Identidad", desc: "¿Quién soy? Reconozco mi cuerpo, mi territorio inmediato y mis emociones actuales como base de mi identidad.", color: "border-primary" },
 { month: "Semana 2", title: "Raíces", desc: "¿De dónde vengo? Exploro mi historia, mi cultura, mi familia y mi genealogía personal para comprender mis raíces.", color: "border-secondary" },
@@ -88,6 +121,29 @@ const Programa = () => {
         </div>
       </section>
 
+
+      {/* Salidas */}
+      <section
+        className="relative text-cream"
+        style={{ backgroundImage: `url(${wallDark})` }}
+      >
+        <div className="dark-overlay absolute inset-0" />
+        <div className="relative z-10 section-padding">
+          <div className="container mx-auto">
+            <h2 className="text-4xl font-display text-center mb-16 spray-tag">Expediciones por Sicilia</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {salidas.map((p, i) => (
+                <div key={i} className={`border-l-4 ${p.color} pl-6 py-2`}>
+                  <h3 className="text-xl font-display mb-3">{p.title}</h3>
+                  <p className="text-cream/75 leading-relaxed font-body">{p.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
       <VideoSection title="El Programa en Acción" subtitle="Descubrí cómo es un día en El Año del Salto" />
 
       {/* CTA */}
