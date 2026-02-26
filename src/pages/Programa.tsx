@@ -121,6 +121,29 @@ const Programa = () => {
         </div>
       </section>
 
+            {/* Agenda / Programa */}
+      <section className="section-padding">
+        <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="relative">
+            <img src={programaImg} alt="Agenda semanal del programa" className="w-full h-[400px] object-cover shadow-xl" />
+            <div className="absolute -bottom-3 -left-3 w-full h-full border-4 border-accent -z-10" />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-display leading-snug mb-6 spray-tag">
+              ¿Cómo se organiza el <span className="text-primary">mes?</span>
+            </h2>
+            <p className="text-muted-foreground font-body text-lg mb-6 leading-relaxed">
+              El programa tiene una estructura clara que brinda seguridad y, al mismo tiempo, espacio para la experiencia. Cada jornada comienza con movimiento y desayuno compartido. Por la mañana se desarrollan clases y espacios formativos, combinados con labores cotidianas que fomentan responsabilidad y autonomía.
+            </p>
+            <p className="text-muted-foreground font-body text-lg mb-6 leading-relaxed">
+              Por la tarde, los talleres de oficios y arte permiten aprender haciendo, integrando creatividad y habilidades prácticas. A lo largo de la semana se incluyen salidas cercanas y lejanas que amplían el aula hacia la naturaleza y la cultura, enriqueciendo lo trabajado en el espacio grupal.
+            </p>
+            <p className="text-foreground font-body text-xl font-bold leading-relaxed">
+              Es un ritmo equilibrado entre aprendizaje, convivencia y experiencia directa, pensado para sostener un proceso profundo durante todo el mes.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Salidas */}
       <section
