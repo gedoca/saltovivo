@@ -132,6 +132,8 @@ const Programa = () => {
           </div>
         </div>
       </section>
+      
+      <VideoSection title="Un Programa Integral" subtitle="German nos cuenta la base nuestro programa" />
 
       {/* Timeline */}
       <section className="relative text-cream" style={{ backgroundImage: `url(${wallDark})` }}>
@@ -249,7 +251,6 @@ const Programa = () => {
       
 
       
-      <VideoSection title="El Programa en Acción" subtitle="Descubrí cómo es un día en El Año del Salto" />
 
       {/* CTA */}
       <section className="bg-secondary text-secondary-foreground section-padding text-center">
