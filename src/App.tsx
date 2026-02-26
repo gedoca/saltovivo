@@ -27,7 +27,7 @@ const App = () => (
             <Route path="/filosofia" element={<Filosofia />} />
             <Route path="/equipo" element={<Equipo />} />
             <Route path="/comunidad" element={<Comunidad />} />
-            <Route path="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" element={<Pre-Inscripción />} />
+            <Route path="/contacto" element={<Contacto />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
