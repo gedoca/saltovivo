@@ -110,6 +110,8 @@ const Programa = () => {
           </h1>
         </div>
       </section>
+      
+      <VideoSection2 title="Un Programa Integral" subtitle="German nos cuenta la base nuestro programa" />
 
       {/* About */}
       <section className="section-padding" style={{ backgroundImage: `url(${wallTexture})` }}>
@@ -133,27 +135,6 @@ const Programa = () => {
         </div>
       </section>
       
-      <VideoSection2 title="Un Programa Integral" subtitle="German nos cuenta la base nuestro programa" />
-
-      {/* Timeline */}
-      <section className="relative text-cream" style={{ backgroundImage: `url(${wallDark})` }}>
-        <div className="dark-overlay absolute inset-0" />
-        <div className="relative z-10 section-padding">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-display mb-16 text-center spray-tag">Cronograma</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {timeline.map((item, i) =>
-              <div key={i} className={`border-t-4 ${item.color} pt-6`}>
-                  <span className="text-sm uppercase tracking-wider text-accent font-bold font-body">{item.month}</span>
-                  <h3 className="text-xl font-display mt-2 mb-3">{item.title}</h3>
-                  <p className="text-cream/70 text-sm leading-relaxed font-body">{item.desc}</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Ejes */}
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl">
@@ -174,6 +155,27 @@ const Programa = () => {
           )}
         </div>
       </section>
+      
+      {/* Timeline */}
+      <section className="relative text-cream" style={{ backgroundImage: `url(${wallDark})` }}>
+        <div className="dark-overlay absolute inset-0" />
+        <div className="relative z-10 section-padding">
+          <div className="container mx-auto">
+            <h2 className="text-4xl font-display mb-16 text-center spray-tag">Cronograma</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {timeline.map((item, i) =>
+              <div key={i} className={`border-t-4 ${item.color} pt-6`}>
+                  <span className="text-sm uppercase tracking-wider text-accent font-bold font-body">{item.month}</span>
+                  <h3 className="text-xl font-display mt-2 mb-3">{item.title}</h3>
+                  <p className="text-cream/70 text-sm leading-relaxed font-body">{item.desc}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
             {/* Jornada */}
       <section className="section-padding">
@@ -256,8 +258,8 @@ const Programa = () => {
       <section className="bg-secondary text-secondary-foreground section-padding text-center">
         <div className="container mx-auto max-w-xl">
           <h2 className="text-3xl font-display mb-6">¿Listo para dar el salto?</h2>
-          <p className="opacity-80 mb-8 font-body">Primera edición: septiembre 2026, Italia.</p>
-          <Link to="/contacto" className="btn-graffiti">Pre-Inscripción</Link>
+          <p className="opacity-80 mb-8 font-body">Primera edición: Septiembre 2026, Italia.</p>
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" className="btn-graffiti">Pre-Inscripción</Link>
         </div>
       </section>
     </>);
