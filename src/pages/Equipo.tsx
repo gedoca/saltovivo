@@ -1,5 +1,6 @@
 import { Instagram, Linkedin } from "lucide-react";
 import wallDark from "@/assets/wall-dark.png";
+import communityImg from "@/assets/community.png";
 import VideoSection from "@/components/VideoSection";
 
 const team = [
@@ -8,7 +9,7 @@ const team = [
     origin: "Italia",
     role: "Maestro & Formador",
     bio: "Autor, coordinador de la Academia Pedagogía Viva y delegado italiano de la RIEEB.",
-    image: "/placeholder.svg",
+    image: "`url(${communityImg})`",
     linkedin: "#",
     instagram: "#",
   },
