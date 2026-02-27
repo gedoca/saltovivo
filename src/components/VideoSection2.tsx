@@ -7,7 +7,7 @@ interface VideoSection2Props {
 const VideoSection2 = ({
   title = "La Educación Prohibida",
   subtitle = "Conocé más sobre El Año del Salto",
-  videoUrl = "https://www.youtube.com/embed/-1Y9OqSJKCc",
+  videoUrl = "https://www.youtube.com/embed/oX15IqVLCHc",
 }: VideoSection2Props) => {
   return (
     <section className="section-padding bg-card">
