@@ -9,7 +9,7 @@ const team = [
     origin: "Italia",
     role: "Maestro & Formador",
     bio: "Autor, coordinador de la Academia Pedagogía Viva y delegado italiano de la RIEEB.",
-    image: "url(${communityImg})",
+    image: 'url(${communityImg})',
     linkedin: "#",
     instagram: "#",
   },
