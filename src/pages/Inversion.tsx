@@ -19,6 +19,7 @@ import {
   UtensilsCrossed,
   Palette,
   Star,
+  Check,
 } from "lucide-react";
 
 const includes = [
