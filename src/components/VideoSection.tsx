@@ -7,7 +7,7 @@ interface VideoSectionProps {
 const VideoSection = ({
   title = "Webinar de Lanzamiento",
   subtitle = "Conocé más sobre El Año del Salto",
-  videoUrl = "https://www.youtube.com/watch?v=ApFVAlYT8Dk",
+  videoUrl = "https://www.youtube.com/embed/ApFVAlYT8Dk",
 }: VideoSectionProps) => {
   return (
     <section className="section-padding bg-card">
