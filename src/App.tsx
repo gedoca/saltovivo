@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import Programa from "./pages/Programa";
 import Filosofia from "./pages/Filosofia";
 import Equipo from "./pages/Equipo";
-import Comunidad from "./pages/Comunidad";
+import Inversion from "./pages/Inversion";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
 
@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/programa" element={<Programa />} />
             <Route path="/filosofia" element={<Filosofia />} />
             <Route path="/equipo" element={<Equipo />} />
-            <Route path="/comunidad" element={<Comunidad />} />
+            <Route path="/inversion" element={<Inversion />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
