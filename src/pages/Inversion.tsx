@@ -8,6 +8,7 @@ import {
   Video,
   Users,
   CreditCardCheck,
+  CreditCard,
   X,
   Globe,
   GraduationCap,
