@@ -4,7 +4,10 @@ import wallDark from "@/assets/wall-dark.png";
 import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 import {
-  Check,
+  ClipboardCheck,
+  Video,
+  Users,
+  CreditCardCheck,
   X,
   Globe,
   GraduationCap,
@@ -103,7 +106,7 @@ const Inversion = () => {
         <div className="container mx-auto max-w-3xl">
           <div className="bg-card border-4 border-primary shadow-2xl p-8 md:p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-6 py-2 font-body font-bold text-xs uppercase tracking-widest skew-x-[-4deg] translate-x-2 -translate-y-0">
-              10 días
+              1 mes - Septiembre 2026
             </div>
             <h2 className="text-4xl md:text-5xl font-display spray-tag mb-2">3.300&nbsp;€</h2>
             <p className="text-muted-foreground font-body mb-8">Tu inversión todo-incluido</p>
