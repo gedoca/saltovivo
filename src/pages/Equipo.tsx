@@ -1,17 +1,72 @@
+import { Instagram, Linkedin } from "lucide-react";
 import wallDark from "@/assets/wall-dark.png";
 import VideoSection from "@/components/VideoSection";
 
 const team = [
-  { name: "Paolo Mai", origin: "Italia", role: "Maestro, formador, autor, coordinador de la Academia Pedagogía Viva, delegado italiano de la RIEEB." },
-  { name: "Giordana Ronci", origin: "Italia", role: "Presidenta de Escuelita Viva, educadora, escritora, formadora, doctora en psicología clínica, coach." },
-  { name: "German Doin", origin: "Argentina", role: "Comunicador, terapeuta, especialista en pedagogías alternativas. Director de La Educación Prohibida y Reevo." },
-  { name: "Loredana Battaglia", origin: "Italia", role: "Terapeuta, educadora curativa, especializada en lenguajes integrados. Cofundadora de FuoriLuogo." },
-  { name: "Mónica González", origin: "México", role: "Educóloga, facilitadora de procesos de aprendizaje en adolescencia, cofundadora de Alas." },
-  { name: "Angélica Garcia", origin: "Colombia", role: "Psicóloga de niños y adolescentes, educadora, fundadora de A-Prender." },
-  { name: "Lucas Malaisi", origin: "Argentina", role: "Psicólogo gestalt. Autor, conferencista y fundador de la Fundación de Educación Emocional." },
+  {
+    name: "Paolo Mai",
+    origin: "Italia",
+    role: "Maestro & Formador",
+    bio: "Autor, coordinador de la Academia Pedagogía Viva y delegado italiano de la RIEEB.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "Giordana Ronci",
+    origin: "Italia",
+    role: "Presidenta de Escuelita Viva",
+    bio: "Educadora, escritora, formadora, doctora en psicología clínica y coach.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "German Doin",
+    origin: "Argentina",
+    role: "Comunicador & Terapeuta",
+    bio: "Especialista en pedagogías alternativas. Director de La Educación Prohibida y Reevo.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "Loredana Battaglia",
+    origin: "Italia",
+    role: "Terapeuta & Educadora",
+    bio: "Educadora curativa, especializada en lenguajes integrados. Cofundadora de FuoriLuogo.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "Mónica González",
+    origin: "México",
+    role: "Educóloga & Facilitadora",
+    bio: "Facilitadora de procesos de aprendizaje en adolescencia, cofundadora de Alas.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "Angélica Garcia",
+    origin: "Colombia",
+    role: "Psicóloga & Educadora",
+    bio: "Psicóloga de niños y adolescentes, educadora, fundadora de A-Prender.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
+  {
+    name: "Lucas Malaisi",
+    origin: "Argentina",
+    role: "Psicólogo & Conferencista",
+    bio: "Psicólogo gestalt. Autor, conferencista y fundador de la Fundación de Educación Emocional.",
+    image: "/placeholder.svg",
+    linkedin: "#",
+    instagram: "#",
+  },
 ];
-
-const colors = ["bg-primary", "bg-secondary", "bg-accent", "bg-sky", "bg-primary", "bg-secondary", "bg-accent"];
 
 const Equipo = () => {
   return (
@@ -32,20 +87,56 @@ const Equipo = () => {
       {/* Team Grid */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, i) => (
               <div
                 key={i}
-                className="bg-card border-2 border-border p-8 hover:border-primary transition-all group hover:-translate-y-1"
+                className="bg-card border border-border rounded-lg overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"
               >
-                <div className={`w-14 h-14 ${colors[i]} flex items-center justify-center mb-5`}>
-                  <span className="text-2xl font-display text-primary-foreground">
-                    {member.name.charAt(0)}
-                  </span>
+                {/* Image */}
+                <div className="flex justify-center pt-8">
+                  <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary transition-colors duration-300">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-xl font-display mb-1">{member.name}</h3>
-                <span className="text-sm text-primary font-bold font-body">{member.origin}</span>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-3 font-body">{member.role}</p>
+
+                {/* Info */}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-display mb-1">{member.name}</h3>
+                  <span className="text-sm text-primary font-bold font-body uppercase tracking-wider">
+                    {member.role}
+                  </span>
+                  <p className="text-xs text-accent font-body font-bold mt-1">{member.origin}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-3 font-body">
+                    {member.bio}
+                  </p>
+
+                  {/* Social */}
+                  <div className="flex justify-center gap-4 mt-5">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label={`LinkedIn de ${member.name}`}
+                    >
+                      <Linkedin size={18} />
+                    </a>
+                    <a
+                      href={member.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label={`Instagram de ${member.name}`}
+                    >
+                      <Instagram size={18} />
+                    </a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

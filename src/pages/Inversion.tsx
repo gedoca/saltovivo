@@ -7,7 +7,7 @@ import {
   ClipboardCheck,
   Video,
   Users,
-  CreditCardCheck,
+  
   CreditCard,
   X,
   Globe,
