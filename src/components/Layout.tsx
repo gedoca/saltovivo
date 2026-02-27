@@ -9,7 +9,7 @@ const navItems = [
   { path: "/programa", label: "Programa" },
   { path: "/filosofia", label: "Filosofía" },
   { path: "/equipo", label: "Equipo" },
-  { path: "/comunidad", label: "Comunidad" },
+  { path: "/inversion", label: "Inversión" },
   { path: "https://forms.gle/VWL5DjWpnFEYuBUg8", label: "Pre-Inscripción" },
 ];
 
