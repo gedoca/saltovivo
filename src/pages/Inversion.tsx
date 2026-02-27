@@ -27,10 +27,30 @@ const includes = [
 ];
 
 const timeline = [
-  { time: "07:00", label: "Práctica matutina", desc: "Yoga, meditación y conexión con el amanecer siciliano", icon: Sun },
-  { time: "13:00", label: "Almuerzo orgánico", desc: "Cocina mediterránea con ingredientes locales de la tierra", icon: UtensilsCrossed },
-  { time: "16:00", label: "Laboratorios de co-creación", desc: "Talleres, arte y expresión en comunidad", icon: Palette },
-  { time: "21:00", label: "Círculos bajo las estrellas", desc: "Conversaciones profundas y ritual de cierre del día", icon: Star },
+  { 
+    time: "Fase 1", 
+    label: "Pre-Inscripción", 
+    desc: "Completa el formulario inicial para manifestar tu interés y postularte al programa.", 
+    icon: ClipboardCheck 
+  },
+  { 
+    time: "Fase 2", 
+    label: "Charla Online", 
+    desc: "Encuentro grupal virtual para conocer los detalles del viaje y resolver dudas generales.", 
+    icon: Video 
+  },
+  { 
+    time: "Fase 3", 
+    label: "Entrevista Individual", 
+    desc: "Conversación profunda uno a uno para alinear expectativas y profundizar en tu propósito.", 
+    icon: Users 
+  },
+  { 
+    time: "Fase 4", 
+    label: "Confirmación y Pago", 
+    desc: "Validación de tu vacante y formalización de la inversión para asegurar tu lugar en Sicilia.", 
+    icon: CreditCard 
+  },
 ];
 
 const participation = [
@@ -70,10 +90,10 @@ const Inversion = () => {
         <div className="relative z-10 container mx-auto px-6 lg:px-24 pb-16">
           <p className="text-sm uppercase tracking-[0.4em] text-accent font-bold mb-4 font-body">Inversión</p>
           <h1 className="text-5xl md:text-7xl font-display text-cream spray-tag">
-            Inversión en tu<br />Evolución
+            A un paso de dar<br />el Salto
           </h1>
           <p className="text-cream/80 text-lg mt-4 max-w-xl font-body font-bold">
-            Un viaje transformador de 10 días en el corazón de Sicilia.
+            Un viaje transformador de 30 días en el corazón de Sicilia para jóvenes de todo el mundo.
           </p>
         </div>
       </section>
@@ -139,7 +159,7 @@ const Inversion = () => {
         <div className="dark-overlay absolute inset-0" />
         <div className="relative z-10 section-padding">
           <div className="container mx-auto max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-display spray-tag text-center mb-16">Un día en el paraíso</h2>
+            <h2 className="text-3xl md:text-4xl font-display spray-tag text-center mb-16">Proceso de Admisión</h2>
             <div className="space-y-0">
               {timeline.map((item, i) => {
                 const Icon = item.icon;
@@ -197,7 +217,7 @@ const Inversion = () => {
         </div>
       </section>
 
-      <VideoSection title="Descubre Saltovivo" subtitle="Tu viaje empieza con un clic" />
+      <VideoSection title="Descubre El Año del Salto" subtitle="Tu viaje empieza con un clic" />
     </>
   );
 };
