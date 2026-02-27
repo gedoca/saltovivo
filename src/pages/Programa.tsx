@@ -3,7 +3,7 @@ import adventureImg from "@/assets/adventure.png";
 import wallTexture from "@/assets/wall-texture.png";
 import wallDark from "@/assets/wall-dark.png";
 import { Link } from "react-router-dom";
-import VideoSection from "@/components/VideoSection2";
+import VideoSection2 from "@/components/VideoSection2";
 import communityImg from "@/assets/community.png";
 
 
