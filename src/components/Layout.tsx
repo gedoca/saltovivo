@@ -99,8 +99,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <div>
               <h4 className="font-display text-lg mb-4 text-accent">Contacto</h4>
-              <p className="text-sm opacity-80 font-body">info@saltovivo.com</p>
-              <p className="text-sm opacity-80 mt-2 font-body">Italia · Argentina · México</p>
+              <p className="text-sm opacity-80 font-body">elanodelsalto@gmail.com</p>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <a href="https://wa.me/393489332959" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇮🇹 Italia</a>
+                <a href="https://wa.me/573165251044" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇨🇴 Colombia</a>
+                <a href="https://wa.me/5491162720879" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇦🇷 Argentina</a>
+                <a href="https://wa.me/5213313278817" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇲🇽 México</a>
+              </div>
             </div>
           </div>
           <div className="border-t border-cream/15 mt-12 pt-8 text-center text-sm opacity-50 font-body">

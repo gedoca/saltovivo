@@ -86,7 +86,7 @@ const Contacto = () => {
           <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
             <div className="bg-card border-2 border-border p-6">
               <h3 className="font-display text-lg mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm font-body">info@saltovivo.com</p>
+              <p className="text-muted-foreground text-sm font-body">elanodelsalto@gmail.com</p>
             </div>
             <div className="bg-card border-2 border-border p-6">
               <h3 className="font-display text-lg mb-2">Ubicación</h3>
