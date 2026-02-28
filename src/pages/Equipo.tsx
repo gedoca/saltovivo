@@ -11,7 +11,7 @@ const team = [
     bio: "Autor, coordinador de la Academia Pedagogía Viva y delegado italiano de la RIEEB.",
     image: "./paolo.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/paolomai1/",
   },
   {
     name: "Giordana Ronci",
@@ -20,7 +20,7 @@ const team = [
     bio: "Educadora, escritora, formadora, doctora en psicología clínica y coach.",
     image: "./giordana.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/giordanaronci/",
   },
   {
     name: "German Doin",
@@ -29,7 +29,7 @@ const team = [
     bio: "Especialista en pedagogías alternativas. Director de La Educación Prohibida y Reevo.",
     image: "./ger.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/german.doin/",
   },
   {
     name: "Loredana Battaglia",
@@ -47,7 +47,7 @@ const team = [
     bio: "Facilitadora de procesos de aprendizaje en adolescencia, cofundadora de Alas.",
     image: "./moni.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/monica_g73/",
   },
   {
     name: "Angélica Garcia",
@@ -56,7 +56,7 @@ const team = [
     bio: "Psicóloga de niños y adolescentes, educadora, fundadora de A-Prender.",
     image: "./keka.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/garciamartinez.angelica/",
   },
   {
     name: "Lucas Malaisi",
@@ -65,7 +65,7 @@ const team = [
     bio: "Psicólogo gestalt. Autor, conferencista y fundador de la Fundación de Educación Emocional.",
     image: "./lucas.png",
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/lucas_jj_malaisi/",
   },
 ];
 
