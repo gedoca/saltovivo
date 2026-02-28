@@ -1,6 +1,7 @@
 import wallTexture from "@/assets/wall-texture.png";
 import wallDark from "@/assets/wall-dark.png";
 import communityImg from "@/assets/community.png";
+import campfireImg from "@/assets/campfire.png";
 import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 
@@ -101,6 +102,15 @@ const Filosofia = () => {
               Nuestro enfoque integra psicoterapia, educación emocional, pedagogías alternativas y la sabiduría del viaje. Un acompañamiento humano, no una fórmula.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Campfire Image Section */}
+      <section className="relative">
+        <img src={campfireImg} alt="Fogón nocturno con jóvenes" className="w-full h-[50vh] object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        <div className="absolute bottom-8 left-0 right-0 text-center">
+          <p className="text-cream text-2xl font-display spray-tag">El fuego que nos une</p>
         </div>
       </section>
 
