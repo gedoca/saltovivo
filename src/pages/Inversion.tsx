@@ -72,7 +72,7 @@ const participation = [
     desc: "¿Quieres aportar tu talento? Postúlate como voluntario y ayúdanos a expandir el impacto de Saltovivo.",
     icon: Heart,
     btn: "Postularme",
-    link: "/contacto",
+    link: "mailto:elanodelsalto@gmail.com",
     color: "border-secondary",
   },
   {
@@ -80,7 +80,7 @@ const participation = [
     desc: "Conviértete en organización delegada o referente de Saltovivo en tu país. Trabajemos juntos para organizar grupos en tu región.",
     icon: Building2,
     btn: "Ser Referente",
-    link: "/contacto",
+    link: "mailto:elanodelsalto@gmail.com",
     color: "border-accent",
   },
 ];
