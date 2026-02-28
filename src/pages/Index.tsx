@@ -45,8 +45,8 @@ const Index = () => {
           <div className="flex-1 flex justify-center animate-fade-in-up">
             <img
               src={heroPerson}
-              alt="Joven saltando"
-              className="max-h-[70vh] w-auto drop-shadow-2xl"
+              alt="Joven saltando al agua"
+              className="max-h-[70vh] w-auto drop-shadow-2xl rounded-lg object-cover"
             />
           </div>
         </div>
