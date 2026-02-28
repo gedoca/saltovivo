@@ -1,6 +1,6 @@
 import { Instagram, Linkedin } from "lucide-react";
 import wallDark from "@/assets/wall-dark.png";
-import communityImg from "@/assets/community.png";
+import nightStarsImg from "@/assets/night-stars.png";
 import VideoSection from "@/components/VideoSection";
 
 const team = [
@@ -132,6 +132,15 @@ const Equipo = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Night gathering image */}
+      <section className="relative">
+        <img src={nightStarsImg} alt="Encuentro nocturno bajo las estrellas" className="w-full h-[50vh] object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        <div className="absolute bottom-8 left-0 right-0 text-center">
+          <p className="text-cream text-2xl font-display spray-tag">Encuentros que transforman</p>
         </div>
       </section>
 
