@@ -119,15 +119,6 @@ const Equipo = () => {
                   {/* Social */}
                   <div className="flex justify-center gap-4 mt-5">
                     <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label={`LinkedIn de ${member.name}`}
-                    >
-                      <Linkedin size={18} />
-                    </a>
-                    <a
                       href={member.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
