@@ -84,8 +84,8 @@ const salidas = [
     color: "border-primary",
   },
   {
-    title: "Isla de Milazzo",
-    text: "Salida en barco hacia la isla para vivir el mar como experiencia de apertura, contemplación y conexión grupal en contacto con el paisaje.",
+    title: "Islas Eolias",
+    text: "Salida en barco desde el puerto de Milazzo hacia las islas para vivir el mar como experiencia de apertura, contemplación y conexión grupal en contacto con el paisaje.",
     color: "border-secondary",
   },
 ];
