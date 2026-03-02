@@ -31,7 +31,7 @@ const Index = () => {
               Dá el Salto
             </h1>
             <p className="text-muted-foreground max-w-md text-lg mb-8 font-body">
-              30 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
+              40 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/programa" className="btn-graffiti">
@@ -60,7 +60,7 @@ const Index = () => {
               Un <span className="accent-underline">Viaje</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-6 font-body">
-              El Año del Salto es un programa para 30 jóvenes de entre 17 y 19 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes sobre su futuro.
+              El Año del Salto es un programa para 40 jóvenes de entre 17 y 19 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes sobre su futuro.
             </p>
             <p className="text-muted-foreground leading-relaxed font-body">
               Un viaje para conocer el mundo desde otro ritmo, conocerse a sí mismos con mayor profundidad y explorar preguntas sobre el sentido, la vocación y el modo de habitar la vida adulta.

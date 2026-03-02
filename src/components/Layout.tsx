@@ -82,7 +82,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <img src={logo} alt="El Año del Salto" className="h-12 w-auto invert mb-4" />
               <p className="text-sm opacity-80 leading-relaxed font-body">
-                30 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
+                40 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
               </p>
             </div>
             <div>
