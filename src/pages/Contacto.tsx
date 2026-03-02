@@ -64,7 +64,7 @@ const Contacto = () => {
                 value={form.age}
                 onChange={(e) => setForm({ ...form, age: e.target.value })}
                 className="w-full border-2 border-border bg-card px-4 py-3 text-sm font-body focus:outline-none focus:border-primary transition-colors"
-                placeholder="17-19 años"
+                placeholder="16-20 años"
               />
             </div>
             <div>

@@ -25,20 +25,23 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-6 lg:px-24 flex flex-col lg:flex-row items-center gap-8">
           <div className="flex-1 animate-slide-in-left">
             <p className="text-sm uppercase tracking-[0.4em] text-primary font-bold mb-4 font-body">
-              Comienza tu viaje
+              Septiembre 2026 · Sicilia
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display leading-[1.1] mb-6 spray-tag">
               Dá el Salto
             </h1>
-            <p className="text-muted-foreground max-w-md text-lg mb-8 font-body">
+            <p className="text-muted-foreground max-w-md text-lg mb-4 font-body">
               40 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
             </p>
+            <p className="text-primary font-bold text-lg mb-8 font-body uppercase tracking-wide">
+              ¡Inscripciones abiertas!
+            </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/programa" className="btn-graffiti">
-                Saber Más
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" className="btn-graffiti">
+                Inscribite
               </Link>
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform" className="btn-graffiti-outline">
-                Pre-Inscripción
+              <Link to="/programa" className="btn-graffiti-outline">
+                Saber Más
               </Link>
             </div>
           </div>
@@ -60,7 +63,7 @@ const Index = () => {
               Un <span className="accent-underline">Viaje</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-6 font-body">
-              El Año del Salto es un programa para 40 jóvenes de entre 17 y 19 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes sobre su futuro.
+              El Año del Salto es un programa para 40 jóvenes de entre 16 y 20 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes sobre su futuro.
             </p>
             <p className="text-muted-foreground leading-relaxed font-body">
               Un viaje para conocer el mundo desde otro ritmo, conocerse a sí mismos con mayor profundidad y explorar preguntas sobre el sentido, la vocación y el modo de habitar la vida adulta.

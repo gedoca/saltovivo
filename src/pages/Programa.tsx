@@ -122,7 +122,7 @@ const Programa = () => {
               Un programa de <span className="accent-underline">transformación</span>
             </h2>
             <p className="leading-relaxed text-lg mb-4 font-body font-bold text-black">
-              Para 40 jóvenes de entre 17 y 19 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes.
+              Para 40 jóvenes de entre 16 y 20 años que eligen vivir una experiencia distinta antes de seguir tomando decisiones importantes.
             </p>
             <p className="leading-relaxed font-body font-bold text-black">
               Un viaje para conocer el mundo desde otro ritmo, conocerse a sí mismos con mayor profundidad y explorar preguntas sobre el sentido y la vocación.
