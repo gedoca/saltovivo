@@ -5,9 +5,9 @@ interface VideoSection2Props {
 }
 
 const VideoSection2 = ({
-  title = "La Educación Prohibida",
+  title = "Paolo Mai - La Filosofía del Año del Salto",
   subtitle = "Conocé más sobre El Año del Salto",
-  videoUrl = "https://www.youtube.com/embed/oX15IqVLCHc",
+  videoUrl = "https://www.youtube.com/embed/dvC6-gxxqmU",
 }: VideoSection2Props) => {
   return (
     <section className="section-padding bg-card">
