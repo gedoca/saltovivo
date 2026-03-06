@@ -50,24 +50,6 @@ const Filosofia = () => {
       
       <VideoSection title="Nuestra Visión" subtitle="La filosofía detrás de El Año del Salto" />
 
-      {/* Manifesto */}
-      <section className="section-padding">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-display mb-8 spray-tag">
-            ¿Por qué <span className="text-primary">El Salto</span>?
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
-            Vivimos en un mundo que les pide a los jóvenes que elijan rápido, que se definan pronto, que sepan qué quieren antes de haber explorado quiénes son.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
-            Nosotros creemos que antes de elegir un camino, hay que detenerse. Mirar adentro. Encontrarse con otros. Probar. Equivocarse. Crear.
-          </p>
-          <p className="text-foreground text-xl leading-relaxed font-body font-bold">
-            El Año del Salto es ese espacio de pausa activa: un lugar donde crecer es el centro.
-          </p>
-        </div>
-      </section>
-
       {/* Principles */}
       <section
         className="relative text-cream"
@@ -89,6 +71,26 @@ const Filosofia = () => {
         </div>
       </section>
 
+      {/* Manifesto */}
+      <section className="section-padding">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-display mb-8 spray-tag">
+            ¿Por qué <span className="text-primary">El Salto</span>?
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
+            Vivimos en un mundo que les pide a los jóvenes que elijan rápido, que se definan pronto, que sepan qué quieren antes de haber explorado quiénes son.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
+            Nosotros creemos que antes de elegir un camino, hay que detenerse. Mirar adentro. Encontrarse con otros. Probar. Equivocarse. Crear.
+          </p>
+          <p className="text-foreground text-xl leading-relaxed font-body font-bold">
+            El Año del Salto es ese espacio de pausa activa: un lugar donde crecer es el centro.
+          </p>
+        </div>
+      </section>
+
+
+      
       {/* Quote / Image */}
       <section className="section-padding">
         <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
