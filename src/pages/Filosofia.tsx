@@ -3,7 +3,7 @@ import wallDark from "@/assets/wall-dark.png";
 import communityImg from "@/assets/community.png";
 import campfireImg from "@/assets/campfire.png";
 import { Link } from "react-router-dom";
-import VideoSection from "@/components/VideoSection";
+import VideoSection from "@/components/VideoSection2";
 
 const principles = [
   {
