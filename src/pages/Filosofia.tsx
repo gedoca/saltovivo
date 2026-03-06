@@ -47,6 +47,8 @@ const Filosofia = () => {
           </p>
         </div>
       </section>
+      
+      <VideoSection title="Nuestra Visión" subtitle="La filosofía detrás de El Año del Salto" />
 
       {/* Manifesto */}
       <section className="section-padding">
@@ -114,7 +116,6 @@ const Filosofia = () => {
         </div>
       </section>
 
-      <VideoSection title="Nuestra Visión" subtitle="La filosofía detrás de El Año del Salto" />
 
       {/* CTA */}
       <section className="bg-primary text-primary-foreground section-padding text-center">
