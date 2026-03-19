@@ -1,21 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 import wallDark from "@/assets/wall-dark.png";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const navItems = [
-  { path: "/", label: "Inicio" },
-  { path: "/programa", label: "Programa" },
-  { path: "/filosofia", label: "Filosofía" },
-  { path: "/equipo", label: "Equipo" },
-  { path: "/inversion", label: "Inversión" },
-  { path: "https://forms.gle/VWL5DjWpnFEYuBUg8", label: "Pre-Inscripción" },
+const navKeys = [
+  { path: "/", key: "inicio" },
+  { path: "/programa", key: "programa" },
+  { path: "/filosofia", key: "filosofia" },
+  { path: "/equipo", key: "equipo" },
+  { path: "/inversion", key: "inversion" },
+  { path: "https://forms.gle/VWL5DjWpnFEYuBUg8", key: "preinscripcion" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,8 +28,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <img src={logo} alt="El Año del Salto" className="h-10 w-auto" />
           </Link>
           
-          <ul className="hidden lg:flex gap-6">
-            {navItems.map((item) => (
+          <ul className="hidden lg:flex gap-6 items-center">
+            {navKeys.map((item) => (
               <li key={item.path}>
                 <Link
                   to={item.path}
@@ -34,25 +37,31 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     location.pathname === item.path ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </Link>
               </li>
             ))}
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
 
-          <button
-            className="lg:hidden text-foreground"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-3">
+            <LanguageSwitcher />
+            <button
+              className="text-foreground"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </nav>
 
         {menuOpen && (
           <div className="lg:hidden bg-background border-b animate-fade-in">
             <ul className="flex flex-col py-4 px-6 gap-4">
-              {navItems.map((item) => (
+              {navKeys.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
@@ -61,7 +70,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                       location.pathname === item.path ? "text-primary" : "text-muted-foreground"
                     }`}
                   >
-                    {item.label}
+                    {t(`nav.${item.key}`)}
                   </Link>
                 </li>
               ))}
@@ -82,23 +91,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <img src={logo} alt="El Año del Salto" className="h-12 w-auto invert mb-4" />
               <p className="text-sm opacity-80 leading-relaxed font-body">
-                40 jóvenes juntos en un viaje interior en busca de sentido, comunidad y transformación.
+                {t("footer.tagline")}
               </p>
             </div>
             <div>
-              <h4 className="font-display text-lg mb-4 text-accent">Navegación</h4>
+              <h4 className="font-display text-lg mb-4 text-accent">{t("footer.navegacion")}</h4>
               <ul className="space-y-2">
-                {navItems.map((item) => (
+                {navKeys.map((item) => (
                   <li key={item.path}>
                     <Link to={item.path} className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">
-                      {item.label}
+                      {t(`nav.${item.key}`)}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="font-display text-lg mb-4 text-accent">Contacto</h4>
+              <h4 className="font-display text-lg mb-4 text-accent">{t("footer.contacto")}</h4>
               <p className="text-sm opacity-80 font-body">elanodelsalto@gmail.com</p>
               <div className="flex flex-wrap gap-3 mt-3">
                 <a href="https://wa.me/393489332959" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇮🇹 Italia</a>
@@ -109,7 +118,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
           <div className="border-t border-cream/15 mt-12 pt-8 text-center text-sm opacity-50 font-body">
-            © 2026 El Año del Salto. Todos los derechos reservados.
+            {t("footer.copyright")}
           </div>
         </div>
       </footer>
