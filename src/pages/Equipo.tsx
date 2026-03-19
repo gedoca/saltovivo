@@ -1,75 +1,24 @@
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import wallDark from "@/assets/wall-dark.png";
 import nightStarsImg from "@/assets/night-stars.png";
 import VideoSection from "@/components/VideoSection";
 
-const team = [
-  {
-    name: "Paolo Mai",
-    origin: "Italia",
-    role: "Maestro & Formador",
-    bio: "Autor, coordinador de la Academia Pedagogía Viva y delegado italiano de la RIEEB.",
-    image: "./paolo.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/paolomai1/",
-  },
-  {
-    name: "Giordana Ronci",
-    origin: "Italia",
-    role: "Presidenta de Escuelita Viva",
-    bio: "Educadora, escritora, formadora, doctora en psicología clínica y coach.",
-    image: "./giordana.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/giordanaronci/",
-  },
-  {
-    name: "German Doin",
-    origin: "Argentina",
-    role: "Comunicador & Terapeuta",
-    bio: "Especialista en pedagogías alternativas. Director de La Educación Prohibida y Reevo.",
-    image: "./ger.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/german.doin/",
-  },
-  {
-    name: "Loredana Battaglia",
-    origin: "Italia",
-    role: "Terapeuta & Educadora",
-    bio: "Educadora curativa, especializada en lenguajes integrados. Cofundadora de FuoriLuogo.",
-    image: "./loredana.png",
-    linkedin: "#",
-    instagram: "#",
-  },
-  {
-    name: "Mónica González",
-    origin: "México",
-    role: "Educóloga & Facilitadora",
-    bio: "Facilitadora de procesos de aprendizaje en adolescencia, cofundadora de Alas.",
-    image: "./moni.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/monica_g73/",
-  },
-  {
-    name: "Angélica Garcia",
-    origin: "Colombia",
-    role: "Psicóloga & Educadora",
-    bio: "Psicóloga de niños y adolescentes, educadora, fundadora de A-Prender.",
-    image: "./keka.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/garciamartinez.angelica/",
-  },
-  {
-    name: "Lucas Malaisi",
-    origin: "Argentina",
-    role: "Psicólogo & Conferencista",
-    bio: "Psicólogo gestalt. Autor, conferencista y fundador de la Fundación de Educación Emocional.",
-    image: "./lucas.png",
-    linkedin: "#",
-    instagram: "https://www.instagram.com/lucas_jj_malaisi/",
-  },
+const teamKeys = ["paolo", "giordana", "german", "loredana", "monica", "angelica", "lucas"] as const;
+
+const teamData = [
+  { key: "paolo", name: "Paolo Mai", origin: "Italia", image: "./paolo.png", instagram: "https://www.instagram.com/paolomai1/" },
+  { key: "giordana", name: "Giordana Ronci", origin: "Italia", image: "./giordana.png", instagram: "https://www.instagram.com/giordanaronci/" },
+  { key: "german", name: "German Doin", origin: "Argentina", image: "./ger.png", instagram: "https://www.instagram.com/german.doin/" },
+  { key: "loredana", name: "Loredana Battaglia", origin: "Italia", image: "./loredana.png", instagram: "#" },
+  { key: "monica", name: "Mónica González", origin: "México", image: "./moni.png", instagram: "https://www.instagram.com/monica_g73/" },
+  { key: "angelica", name: "Angélica Garcia", origin: "Colombia", image: "./keka.png", instagram: "https://www.instagram.com/garciamartinez.angelica/" },
+  { key: "lucas", name: "Lucas Malaisi", origin: "Argentina", image: "./lucas.png", instagram: "https://www.instagram.com/lucas_jj_malaisi/" },
 ];
 
 const Equipo = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* Header */}
@@ -77,9 +26,9 @@ const Equipo = () => {
         <div className="dark-overlay absolute inset-0" />
         <div className="relative z-10 section-padding pt-32">
           <div className="container mx-auto max-w-3xl text-center">
-            <h1 className="text-5xl md:text-6xl font-display spray-tag mb-6">Nuestro Equipo</h1>
+            <h1 className="text-5xl md:text-6xl font-display spray-tag mb-6">{t("equipo.headerTitle")}</h1>
             <p className="text-cream/80 text-lg leading-relaxed font-body">
-              Un equipo con experiencia en psicoterapia, educación emocional y pedagogías alternativas.
+              {t("equipo.headerDesc")}
             </p>
           </div>
         </div>
@@ -89,34 +38,25 @@ const Equipo = () => {
       <section className="section-padding">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, i) => (
+            {teamData.map((member, i) => (
               <div
                 key={i}
                 className="bg-card border border-border rounded-lg overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"
               >
-                {/* Image */}
                 <div className="flex justify-center pt-8">
                   <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary transition-colors duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
-
-                {/* Info */}
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-display mb-1">{member.name}</h3>
                   <span className="text-sm text-primary font-bold font-body uppercase tracking-wider">
-                    {member.role}
+                    {t(`equipo.roles.${member.key}`)}
                   </span>
                   <p className="text-xs text-accent font-body font-bold mt-1">{member.origin}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-3 font-body">
-                    {member.bio}
+                    {t(`equipo.bios.${member.key}`)}
                   </p>
-
-                  {/* Social */}
                   <div className="flex justify-center gap-4 mt-5">
                     <a
                       href={member.instagram}
@@ -140,11 +80,11 @@ const Equipo = () => {
         <img src={nightStarsImg} alt="Encuentro nocturno bajo las estrellas" className="w-full h-[50vh] object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         <div className="absolute bottom-8 left-0 right-0 text-center">
-          <p className="text-cream text-2xl font-display spray-tag">Encuentros que transforman</p>
+          <p className="text-cream text-2xl font-display spray-tag">{t("equipo.nightText")}</p>
         </div>
       </section>
 
-      <VideoSection title="Conocé al Equipo" subtitle="Las personas detrás del proyecto" />
+      <VideoSection title={t("equipo.videoTitle")} subtitle={t("equipo.videoSubtitle")} />
     </>
   );
 };
