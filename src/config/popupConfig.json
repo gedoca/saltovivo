@@ -1,6 +1,6 @@
 {
-  "active": false,
-  "backgroundImage": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070",
+  "active": true,
+  "backgroundImage": "/src/assets/salto-popup.png",
   "link": "https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform",
   "content": {
     "titleKey": "popup.title",
