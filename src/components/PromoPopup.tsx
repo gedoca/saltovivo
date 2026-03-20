@@ -28,7 +28,7 @@ const PromoPopup = () => {
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center brightness-[0.35]"
-          style={{ backgroundImage: `url(${popupConfig.backgroundImage})` }}
+          style={{ backgroundImage: `url(${communityImg})` }}
         />
 
         {/* Close button */}
