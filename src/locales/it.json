@@ -235,5 +235,10 @@
     "inicioVal": "Settembre 2026",
     "videoTitle": "Come Iscriversi?",
     "videoSubtitle": "Ti spieghiamo il processo passo dopo passo"
+  },
+  "popup": {
+    "title": "31/03",
+    "subtitle": "Riunione informativa in spagnolo per gli ISCRITTI. Hai tempo per pre-iscriverti fino al 30 marzo.",
+    "button": "Fallo qui!"
   }
 }

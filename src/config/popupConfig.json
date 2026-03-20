@@ -1,0 +1,10 @@
+{
+  "active": true,
+  "backgroundImage": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070",
+  "link": "https://saltovivo.org/inscripcion",
+  "content": {
+    "titleKey": "popup.title",
+    "subtitleKey": "popup.subtitle",
+    "buttonKey": "popup.button"
+  }
+}
