@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
 import popupConfig from "@/config/popupConfig.json";
+import communityImg from "@/assets/community.png";
 
 const PromoPopup = () => {
   const { t } = useTranslation();
