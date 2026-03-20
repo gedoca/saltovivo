@@ -1,6 +1,6 @@
 {
   "active": true,
-  "backgroundImage": "../src/assets/salto-popup.png",
+  "backgroundImage": "community",
   "link": "https://docs.google.com/forms/d/e/1FAIpQLSdfxyVXZCFToD-vTNNwk2vEEyF1nx70qZ7TOwBE3TPKgwjZKA/viewform",
   "content": {
     "titleKey": "popup.title",
