@@ -12,9 +12,24 @@ import {
 const Inversion = () => {
   const { t } = useTranslation();
 
-  const includes = [
-    t("inversion.inc1"), t("inversion.inc2"), t("inversion.inc3"),
-    t("inversion.inc4"), t("inversion.inc5"), t("inversion.inc6"),
+  const PREINSCRIPCION_URL = "https://forms.gle/VWL5DjWpnFEYuBUg8";
+
+  const pricingOptions = [
+    {
+      key: "week1",
+      featured: false,
+      includes: ["incEstadia", "incProgWeek1", "incExperiencias", "incSeguros", "incTalleres", "incComidas"],
+    },
+    {
+      key: "week2",
+      featured: false,
+      includes: ["incEstadia", "incProgWeek2", "incExperiencias", "incSeguros", "incTalleres", "incComidas"],
+    },
+    {
+      key: "month",
+      featured: true,
+      includes: ["incEstadia", "incProgMonth", "incExperiencias", "incSeguros", "incTalleres", "incComidas"],
+    },
   ];
 
   const timeline = [
@@ -56,27 +71,67 @@ const Inversion = () => {
         </div>
       </section>
 
-      {/* Pricing Card */}
+      {/* Pricing Cards */}
       <section className="section-padding" style={{ backgroundImage: `url(${wallTexture})` }}>
-        <div className="container mx-auto max-w-3xl">
-          <div className="bg-card border-4 border-primary shadow-2xl p-8 md:p-12 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-6 py-2 font-body font-bold text-xs uppercase tracking-widest skew-x-[-4deg] translate-x-2 -translate-y-0">
-              {t("inversion.badge")}
-            </div>
-            <h2 className="text-4xl md:text-5xl font-display spray-tag mb-2">{t("inversion.precio")}</h2>
-            <p className="text-muted-foreground font-body mb-8">{t("inversion.precioSub")}</p>
-            <ul className="text-left space-y-3 max-w-md mx-auto mb-8">
-              {includes.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="text-secondary mt-1 shrink-0" size={18} />
-                  <span className="font-body text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center gap-3 justify-center text-muted-foreground text-sm font-body">
-              <X size={16} className="text-destructive shrink-0" />
-              <span>{t("inversion.noIncluye")}</span>
-            </div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-display spray-tag mb-3">
+              {t("inversion.opcionesTitle")}
+            </h2>
+            <p className="text-muted-foreground font-body max-w-2xl mx-auto">
+              {t("inversion.opcionesSubtitle")}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            {pricingOptions.map((opt) => (
+              <div
+                key={opt.key}
+                className={`bg-card shadow-2xl p-8 relative overflow-hidden flex flex-col ${
+                  opt.featured
+                    ? "border-4 border-primary md:scale-105"
+                    : "border-2 border-border"
+                }`}
+              >
+                {opt.featured && (
+                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-5 py-2 font-body font-bold text-xs uppercase tracking-widest skew-x-[-4deg] translate-x-2">
+                    {t("inversion.badgeFeatured")}
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <p className="text-xs uppercase tracking-[0.3em] text-accent font-body font-bold mb-2">
+                    {t(`inversion.${opt.key}Duration`)}
+                  </p>
+                  <h3 className="text-3xl md:text-4xl font-display spray-tag mb-1">
+                    {t(`inversion.${opt.key}Price`)}
+                  </h3>
+                  <p className="text-muted-foreground font-body text-sm">
+                    {t(`inversion.${opt.key}Name`)}
+                  </p>
+                </div>
+                <ul className="text-left space-y-3 mb-6 flex-1">
+                  {opt.includes.map((incKey) => (
+                    <li key={incKey} className="flex items-start gap-3">
+                      <Check className="text-secondary mt-1 shrink-0" size={16} />
+                      <span className="font-body text-foreground text-sm">
+                        {t(`inversion.${incKey}`)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-start gap-2 text-muted-foreground text-xs font-body mb-6">
+                  <X size={14} className="text-destructive shrink-0 mt-0.5" />
+                  <span>{t("inversion.noIncluye")}</span>
+                </div>
+                <a
+                  href={PREINSCRIPCION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-graffiti text-center"
+                >
+                  {t("inversion.opcionCTA")}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
