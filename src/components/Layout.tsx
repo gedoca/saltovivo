@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 import wallDark from "@/assets/wall-dark.png";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { fbqTrack } from "@/lib/pixel";
 
 const navKeys = [
   { path: "/", key: "inicio" },
@@ -33,6 +34,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <li key={item.path}>
                 <Link
                   to={item.path}
+                  onClick={
+                    item.key === "preinscripcion"
+                      ? () => fbqTrack("Lead", { source: "nav_preinscripcion" })
+                      : undefined
+                  }
                   className={`text-xs font-bold tracking-widest uppercase transition-colors hover:text-primary ${
                     location.pathname === item.path ? "text-primary" : "text-muted-foreground"
                   }`}
@@ -65,7 +71,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      if (item.key === "preinscripcion") {
+                        fbqTrack("Lead", { source: "nav_preinscripcion_mobile" });
+                      }
+                    }}
                     className={`text-sm font-bold tracking-widest uppercase ${
                       location.pathname === item.path ? "text-primary" : "text-muted-foreground"
                     }`}
@@ -110,10 +121,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <h4 className="font-display text-lg mb-4 text-accent">{t("footer.contacto")}</h4>
               <p className="text-sm opacity-80 font-body">elanodelsalto@gmail.com</p>
               <div className="flex flex-wrap gap-3 mt-3">
-                <a href="https://wa.me/393489332959" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇮🇹 Italia</a>
-                <a href="https://wa.me/573165251044" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇨🇴 Colombia</a>
-                <a href="https://wa.me/5491162720879" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇦🇷 Argentina</a>
-                <a href="https://wa.me/5213313278817" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇲🇽 México</a>
+                <a href="https://wa.me/393489332959" onClick={() => fbqTrack("Contact", { channel: "whatsapp", country: "IT" })} target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇮🇹 Italia</a>
+                <a href="https://wa.me/573165251044" onClick={() => fbqTrack("Contact", { channel: "whatsapp", country: "CO" })} target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇨🇴 Colombia</a>
+                <a href="https://wa.me/5491162720879" onClick={() => fbqTrack("Contact", { channel: "whatsapp", country: "AR" })} target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇦🇷 Argentina</a>
+                <a href="https://wa.me/5213313278817" onClick={() => fbqTrack("Contact", { channel: "whatsapp", country: "MX" })} target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all font-body">🇲🇽 México</a>
               </div>
             </div>
           </div>
