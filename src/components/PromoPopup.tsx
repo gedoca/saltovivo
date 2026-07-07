@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
 import popupConfig from "@/config/popupConfig.json";
 import communityImg from "@/assets/community.png";
+import { fbqTrack } from "@/lib/pixel";
 
 const PromoPopup = () => {
   const { t } = useTranslation();
@@ -50,6 +51,7 @@ const PromoPopup = () => {
           </p>
           <a
             href={popupConfig.link}
+            onClick={() => fbqTrack("Lead", { source: "promo_popup" })}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-1 inline-block rounded-full bg-white px-8 py-3 text-sm font-bold text-gray-900 shadow-lg transition-transform hover:scale-105 active:scale-[0.98]"

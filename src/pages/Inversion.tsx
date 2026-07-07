@@ -4,6 +4,7 @@ import wallTexture from "@/assets/wall-texture.png";
 import wallDark from "@/assets/wall-dark.png";
 import { Link } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
+import { fbqTrack } from "@/lib/pixel";
 import {
   ClipboardCheck, Video, Users, CreditCard, X, Globe,
   GraduationCap, UserPlus, Heart, Building2, Check,
@@ -124,6 +125,7 @@ const Inversion = () => {
                 </div>
                 <a
                   href={PREINSCRIPCION_URL}
+                  onClick={() => fbqTrack("Lead", { source: "inversion_pricing", plan: opt.key })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-graffiti text-center"
@@ -206,7 +208,18 @@ const Inversion = () => {
                   <h3 className="font-display text-xl mb-3">{t(`inversion.${card.titleKey}`)}</h3>
                   <p className="font-body text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{t(`inversion.${card.descKey}`)}</p>
                   {isExternal ? (
-                    <a href={card.link} target="_blank" rel="noopener noreferrer" className="btn-graffiti">
+                    <a
+                      href={card.link}
+                      onClick={() =>
+                        fbqTrack(
+                          card.link.startsWith("mailto:") ? "Contact" : "Lead",
+                          { source: "inversion_ecosistema", card: card.titleKey }
+                        )
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-graffiti"
+                    >
                       {t(`inversion.${card.btnKey}`)}
                     </a>
                   ) : (
