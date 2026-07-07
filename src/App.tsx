@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import PromoPopup from "./components/PromoPopup";
+import PixelTracker from "./components/PixelTracker";
 import Index from "./pages/Index";
 import Programa from "./pages/Programa";
 import Filosofia from "./pages/Filosofia";
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <PromoPopup />
       <HashRouter>
+        <PixelTracker />
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
